@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <script
+      src="https://kit.fontawesome.com/7c1e973e41.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Crystal</title>
+  </head>
+  <body>
+    <section id="home-page">
+      <!--Nav Bar-->
+      <div>
+        <nav id="nav">
+          <ul class="navbar">
+            <li class="navbar-link" onclick="toggleNavbar()">
+              <a href="/home-page.html">HOME</a>
+            </li>
+            <!-- <li
+              class="navbar-link"
+            >
+              <a href="#products">PRODUCTS</a>
+            </li> -->
+            <li class="navbar-link" onclick="viewProfile()">
+              <a href="/profile.html">PROFILE</a>
+            </li>
+            <li class="navbar-link" onclick="toggleNavbar()">
+              <a href="/cart.html">CART</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="filters">
+        <form onsubmit="event.preventDefault(); searchForProducts();">
+        <input type="text" id="search">
+        <button type="submit">Search</button>
+        </form>
+        <button onclick="sortNamesAsc">Products (A-Z)</button>
+        <button onclick="sortNamesDesc">Products (Z-A)</button>
+        <button onclick="sortPriceAsc">Price (Low - High)</button>
+        <button onclick="sortPriceDesc">Price (High - Low)</button>
+        <button onclick="clearFilter">Clear Filter</button>
+      </div>
+      <!--Product Card-->
+      <div id="products">
+        <div class="product-container"></div>
+      </div>
+    </section>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>

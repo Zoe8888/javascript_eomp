@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 700;
+  height: 100%;
+  color: rgb(241, 136, 117);
+  background-image: url(/images/beige.png.jpg);
+  object-fit: cover;
+  background-color: rgb(240, 202, 163);
+}
+
+#nav {
+  background-color: rgb(241, 136, 117);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding: 2% 0;
+  gap: 50px;
+}
+
+.navbar a {
+  color: rgb(240, 202, 163);
+  text-decoration: none;
+  font-size: 2rem;
+  width: 10vw;
+  white-space: nowrap;
+}
+
+.navbar a:hover {
+  padding: 0 3%;
+  border-radius: 5px;
+  border: 2px solid rgb(240, 202, 163);
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 13%;
+  margin-bottom: 5%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(240, 202, 163);
+  color: rgb(241, 136, 117);
+  border-radius: 5px;
+  border: 2px solid rgb(241, 136, 117);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  width: 50vw;
+  padding: 2% 0;
+}
+
+.hide {
+  display: none;
+}
+
+#product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.userProductContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(240, 202, 163);
+  color: rgb(241, 136, 117);
+  border-radius: 5px;
+  border: 2px solid rgb(241, 136, 117);
+  width: 50vw;
+  padding: 2% 0;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.create-product {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60vw;
+  color: rgb(240, 202, 163);
+  background-color: rgb(241, 136, 117);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 2%;
+}
+
+.create-product input,
+.edit-container form input,
+.edit-product form input {
+  width: 55vw;
+  height: 5vh;
+  color: rgb(240, 202, 163);
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(240, 202, 163);
+  padding: 0 2%;
+  margin: 1% 0;
+}
+
+.create-product input::placeholder,
+.edit-container form input::placeholder,
+.edit-product form input::placeholder {
+  color: rgb(240, 202, 163);
+}
+
+.edit-container,
+.edit-product {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.edit-container form,
+.edit-product form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60vw;
+  color: rgb(240, 202, 163);
+  background-color: rgb(241, 136, 117);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 2%;
+  height: 50vh;
+}
+
+.save {
+  height: 5vh;
+  width: 8vw;
+  color: rgb(226, 128, 110);
+  background-color: rgb(240, 202, 163);
+  border-radius: 5px;
+  border: 2px solid rgb(240, 202, 163);
+}
+
+.product-image img {
+  height: 20vh;
+}
+
+.hide {
+  display: none;
+}
+
+.edit, 
+.delete,
+.editProduct,
+.deleteProduct {
+  height: 5vh;
+  width: 8vw;
+  color: rgb(240, 202, 163);
+  background-color: rgb(241, 136, 117);
+  border-radius: 5px;
+  border: 2px solid rgb(226, 128, 110);
+}
+
+.edit:hover, 
+.delete:hover,
+.editProduct:hover,
+.deleteProduct:hover {
+  color: rgb(226, 128, 110);
+  background-color: rgb(226, 208, 173);
+  transition: .3s ease-in-out;
+  width: 9vw;
+}
+
+/* .edit_profile,
+.edit-product {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60vw;
+  color: rgb(240, 202, 163);
+  background-color: rgb(241, 136, 117);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 2%;
+}
+
+.edit_profile input::placeholder,
+.edit-product input::placeholder {
+  color: rgb(240, 202, 163);
+} */

@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 700;
+  height: 100%;
+  color: rgb(241, 136, 117);
+  background-image: url(/images/beige.png.jpg);
+  object-fit: cover;
+  background-color: rgb(240, 202, 163);
+  overflow-x: scroll;
+}
+
+#home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav {
+  background-color: rgb(241, 136, 117);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding: 1% 0;
+  gap: 40px;
+}
+
+.navbar a {
+  color: rgb(240, 202, 163);
+  text-decoration: none;
+  font-size: 2rem;
+  width: 10vw;
+  white-space: nowrap;
+}
+
+.navbar a:hover {
+  padding: 0 3%;
+  border-radius: 5px;
+  border: 2px solid rgb(240, 202, 163);
+}
+
+#filters {
+  display: flex;
+  position: fixed;
+  top: 15%;
+  left: 3%;
+  margin: 2% 0;
+  z-index: 100;
+  width: 100vw;
+}
+
+#filters input {
+  border: 1px solid rgb(241, 136, 117);
+  border-radius: 5px;
+  height: 5vh;
+  outline: none;
+}
+
+#filters button {
+  background-color: rgb(241, 136, 117);
+  color: wheat;
+  border: 1px solid rgb(241, 136, 117);
+  border-radius: 5px;
+  margin: 0 4%;
+}
+
+.cart {
+  background-color: rgb(241, 136, 117);
+  border-radius: 50px;
+  border: 2px solid rgb(241, 136, 117);
+  padding: 20%;
+}
+
+.cart:hover {
+  background-color: wheat;
+}
+
+#products {
+  display: flex;
+  margin-top: 12%;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto;
+  margin: 3%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 20vw;
+  background-color: wheat;
+  border-radius: 5px;
+  border: 2px solid rgb(241, 136, 117);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 2%;
+  text-align: center;
+  z-index: 0;
+}
+
+.product-image img {
+  height: 20vh;
+  border-radius: 5px;
+  border: 2px solid rgb(241, 136, 117);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product_image input {
+  height: 5vh;
+  color: rgb(241, 136, 117);
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid rgb(240, 202, 163);
+  margin: 2% 0;
+}
+
+@media screen and (max-width: 916px) {
+  .product-container {
+    margin-top: 15%;
+  }
+}

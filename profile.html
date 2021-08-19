@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/profile.css" />
+    <title>Crystal Cave</title>
+  </head>
+  <body>
+    <nav id="nav">
+      <ul class="navbar">
+        <li class="navbar-link" onclick="toggleNavbar()">
+          <a href="/home-page.html">HOME</a>
+        </li>
+        <!-- <li class="navbar-link" onclick="toggleNavbar()">
+          <a href="#products">PRODUCTS</a>
+        </li> -->
+        <li class="navbar-link" onclick="toggleNavbar()">
+          <a href="/profile.html">PROFILE</a>
+        </li>
+        <li class="navbar-link" onclick="toggleNavbar()">
+          <a href="/cart.html">CART</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="profile">
+      <div class="profile-container">
+      </div>
+      <div class="edit-container hide">
+        <form class="edit_profile" onsubmit="return false">
+          <button class="close">X</button>
+          <input class="edit-name" type="text" placeholder="Name" />
+          <input class="edit-surname" type="text" placeholder="Surname" />
+          <input class="edit-email" type="text" placeholder="Email" />
+          <input class="edit-password" type="text" placeholder="Password" />
+          <button class="save" onclick="saveEditedProfile()">Save</button>
+        </form>
+      </div>
+    </section>
+    <section id="product-section">
+      <div class="userProductContainer">
+      </div>
+      <div class="create-product">
+        <h2>Add new product</h2>
+        <form
+          onsubmit="addProduct(); return false"
+        >
+          <input type="text" class="add-product_name" placeholder="Product Name" />
+          <input type="text" class="add-category" placeholder="Category" />
+          <input type="text" class="add-description" placeholder="Description" />
+          <input type="text" class="add-dimensions" placeholder="Dimensions" />
+          <input type="text" class="add-price" placeholder="Price (R)" />
+          <input type="text" class="add-id" placeholder="User Id" />
+          <input
+            type="file"
+            class="product_image"
+            placeholder="Product Image"
+            onchange="viewFile()"
+          />
+          <img class="add-hide" height="300" src="" alt="" />
+          <button class="newProduct_button">Add Product</button>
+        </form>
+      </div>
+      <div class="edit-product hide">
+        <form
+        onsubmit="return false"
+      >
+        <input type="text" class="edit-product_name" placeholder="Product Name" />
+        <input type="text" class="edit-category" placeholder="Category" />
+        <input type="text" class="edit-description" placeholder="Description" />
+        <input type="text" class="edit-dimensions" placeholder="Dimensions" />
+        <input type="text" class="edit-price" placeholder="Price" />
+        <input
+          type="file"
+          class="product_image"
+          placeholder="Product Image"
+          onchange="viewFile()"
+        />
+        <img class="hide" height="300" src="" alt="" />
+        <button type="submit" onclick="editProduct()" class="editProductButton">Edit Product</button>
+      </form>
+      </div>
+    </section>
+    <script src="/js/profile.js"></script>
+  </body>
+</html>

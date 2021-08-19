@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 700;
+  height: 100%;
+  color: rgb(241, 136, 117);
+  background-image: url(/images/beige.png.jpg);
+  object-fit: cover;
+  background-color: rgb(240, 202, 163);
+}
+
+#nav {
+    background-color: rgb(241, 136, 117);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 2% 0;
+    gap: 50px;
+  }
+  
+  .navbar a {
+    color: rgb(240, 202, 163);
+    text-decoration: none;
+    font-size: 2rem;
+    width: 10vw;
+    white-space: nowrap;
+  }
+  
+  .navbar a:hover {
+    padding: 0 3%;
+    border-radius: 5px;
+    border: 2px solid rgb(240, 202, 163);
+  }
+
+  #cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    margin: 3% 2%;
+  }
+
+  .cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: auto;
+    margin: 3% 0;
+    padding: 2%;
+    background-color: rgb(240, 202, 163);
+    border-radius: 5px;
+    border: 2px solid rgb(241, 136, 117);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .cart-image img {
+    height: 20vh;
+    border-radius: 5px;
+    border: 2px solid rgb(241, 136, 117);
+  }
+
+  .cart-container-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .add, 
+  .remove,
+  .checkout, 
+  .clear {
+    height: 5vh;
+    width: 7vw;
+    color: rgb(240, 202, 163);
+    background-color: rgb(241, 136, 117);
+    border-radius: 5px;
+    border: 2px solid rgb(226, 128, 110);
+  }
+
+  .checkout {
+    margin-bottom: 10%;
+  }
+
+  .add:hover, 
+  .remove:hover,
+  .checkout:hover, 
+  .clear:hover {
+    color: rgb(226, 128, 110);
+    background-color: rgb(226, 208, 173);
+    transition: .3s ease-in-out;
+    width: 8vw;
+  }
+
+  .totalPrice {
+    color: rgb(240, 202, 163);
+    background-color: rgb(241, 136, 117);
+    border-radius: 5px;
+    border: 2px solid rgb(240, 202, 163);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    width: 100%;
+  }

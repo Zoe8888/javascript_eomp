@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Crystal Cave</title>
+  </head>
+  <body>
+    <!--Registration-->
+    <section id="login-page">
+      <div class="container">
+        <div id="form-box">
+          <div class="login-container active">
+            <h1>Sign In</h1>
+            <form
+              onsubmit="signIn(document.querySelector('.username').value, document.querySelector('.password').value); return false"
+            >
+              <div>
+                <input class="username" type="text" placeholder="Username" />
+              </div>
+              <div>
+                <input class="password" type="password" placeholder="Password" />
+              </div>
+              <button class="login-button">Log In</button>
+            </form>
+          </div>
+          <div class="register-container">
+            <h1>Create account</h1>
+            <form
+              onsubmit="signUp(
+              document.querySelector('.name').value,
+              document.querySelector('.surname').value,
+              document.querySelector('.email').value,
+              document.querySelector('.userkey').value,
+              document.querySelector('.passkey').value); return false"
+            >
+              <div>
+                <input class="name" type="text" placeholder="Name" />
+              </div>
+              <div>
+                <input class="surname" type="text" placeholder="Surname" />
+              </div>
+              <div>
+                <input class="email" type="text" placeholder="Email" />
+              </div>
+              <div>
+                <input class="userkey" type="text" placeholder="Username" />
+              </div>
+              <div>
+                <input class="passkey" type="text" placeholder="Password" />
+              </div>
+              <button class="register-button">Register</button>
+            </form>
+          </div>
+        </div>
+        <div id="right-container">
+          <h1>Welcome back to the <br /><span>Crystal Cave</span></h1>
+          <p>It's great to see you again!</p>
+          <img src="/images/crystals-removebg-preview.png" alt="eye" />
+          <p>Don't have an account?</p>
+          <button id="signUp" onclick="switch_side()">Create account</button>
+        </div>
+        <div id="left-container">
+          <h1>Welcome to the <br /><span>Crystal Cave</span></h1>
+          <p>We're so glad to see you!</p>
+          <img src="/images/crystals-removebg-preview.png" alt="eye" />
+          <p>Already have an account?</p>
+          <button id="signIn" onclick="switch_side()">Sign In</button>
+        </div>
+      </div>
+    </section>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
