@@ -6,7 +6,7 @@ let cart = JSON.parse(window.localStorage["cart"]);
     let total = 0;
     console.log(cart[0])
     if (cart.length == 0) {
-      cartConatiner.innerHTML += `<h2>No items currently in your cart</h2>`;
+      cartConatiner.innerHTML += `<h2 class="empty">No items currently in your cart</h2>`;
     } else {
       cart.forEach((cartItem) => {
         document.querySelector("#cart-container").innerHTML += `
@@ -29,10 +29,15 @@ let cart = JSON.parse(window.localStorage["cart"]);
           <button class="checkout">Checkout</button>
       </div>`;
       console.log(cart)
+      document.querySelector('.checkout').addEventListener('click', () => {
+        clear();
+      })
     }
   }
 
   showCart();
+
+  // function add
 
   function remove(product_id) {
     for (let i in cart) {
@@ -44,11 +49,12 @@ let cart = JSON.parse(window.localStorage["cart"]);
     }
     window.alert("Product successfully removed from cart.")
     window.localStorage.href = "/cart.html";
+    showCart();
   }
 
   function clear() {
-    window.localStorage.removeItem("cart");
-    showCart();
+    window.localStorage.removeItem["cart"];
+    document.querySelector("#cart-container").innerHTML += `<h2 class="empty">No items currently in your cart</h2>`;
   }
 
   
