@@ -44,6 +44,12 @@ function edit () {
   container.classList.toggle("hide");
 }
 
+document.querySelector('.close').addEventListener('click', () => {
+  let edit_profile = document.querySelector('.edit-container')
+  edit_profile.classList.toggle("hide");
+  edit_profile.classList.toggle("close");
+})
+
 function saveEditedProfile() {
   fetch(
     `https://guarded-lake-78300.herokuapp.com/edit-profile/${window.localStorage["user-id"]}/`,
@@ -90,16 +96,16 @@ function deleteProfile() {
 
 document.querySelector('.edit-close').addEventListener('click', () => {
     let edit_product = document.querySelector('.edit-product')
-  edit_product.classList.toggle("hide");
-  container.classList.toggle("hide");
-  container.classList.toggle("edit-close");
+  edit_product.classList.toggle("hide-edit");
+  // container.classList.toggle("hide");
+  edit_product.classList.toggle("edit-close");
 })
 
 function updateProduct (e) {
   let edit_product = document.querySelector('.edit-product')
-  edit_product.classList.toggle("hide");
-  container.classList.toggle("hide");
-  container.classList.toggle("edit-close");
+  edit_product.classList.toggle("hide-edit");
+  // container.classList.toggle("hide");
+  // edit_product.classList.toggle("edit-close");
   edit_product.id = e.parentElement.parentElement.id
 }
 

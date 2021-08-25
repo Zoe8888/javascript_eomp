@@ -169,7 +169,8 @@ body {
   border: 2px solid rgb(241, 136 , 117)
 }
 
-.hide {
+.hide,
+.hide-edit {
   display: none;
 }
 
