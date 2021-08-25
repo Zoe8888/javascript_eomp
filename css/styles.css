@@ -23,7 +23,7 @@ body {
 .container {
   position: relative;
   width: 66vw;
-  height: 28vw;
+  height: 33vw;
   background-color: white;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -60,6 +60,12 @@ body {
   gap: 20px;
   color: rgb(241, 136, 117);
   text-align: center;
+  height: 100%;
+}
+
+#left-container h1,
+#right-container h1 {
+  margin-top: 3%;
 }
 
 #left-container {
@@ -87,7 +93,7 @@ img {
   align-items: center;
   /* background-color: rgb(173, 238, 186); */
   width: 30vw;
-  height: 64vh;
+  height: 36vw;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -97,7 +103,7 @@ img {
   flex-direction: column;
   align-items: center;
   width: 30vw;
-  height: 64vh;
+  height: 36vw;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   gap: 50px;
@@ -122,6 +128,7 @@ img {
 .register-container input {
   width: 20vw;
   height: 7vh;
+  color: rgb(240, 202, 163);
   border: none;
   border-bottom: 2px solid rgb(240, 202, 163);
   background: none;
@@ -137,7 +144,7 @@ img {
 .login-button {
   margin: 10% 0;
   width: 20vh;
-  height: 5vh;
+  height: 7vh;
   color: rgb(240, 202, 163);
   outline: none;
   border-radius: 5px;
@@ -165,10 +172,27 @@ img {
   background-color: rgb(240, 202, 163);
 }
 
+@media screen and (max-width: 694px) {
+  .container {
+    height: 57vw;
+  }
+
+  #form-box {
+    position: absolute;
+    left: 25px;
+  }
+
+  .register-container, 
+  .login-container {
+    width: 42vw;
+    height: 68vw;
+}
+}
+
 @media screen and (max-width: 916px) {
   .container {
     width: 88vw;
-    height: 50vw;
+    height: 48vw;
   }
 
   #form-box {
@@ -183,17 +207,13 @@ img {
   .register-container,
   .login-container {
     width: 40vw;
-    height: 60vh;
+    height: 58vw;
   }
 
   .register-container {
     display: none;
     gap: 20px;
   }
-
-  /* .register-container h1 {
-    ma
-  } */
 
   .register-button,
   .login-button {

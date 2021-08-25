@@ -78,7 +78,7 @@ body {
     flex-direction: column;
 }
 
-.userProductContainer {
+.product {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,17 +152,21 @@ body {
   height: 50vh;
 }
 
-.save {
+.save,
+.newProduct_button,
+.editProductButton {
   height: 5vh;
   width: 8vw;
   color: rgb(226, 128, 110);
   background-color: rgb(240, 202, 163);
   border-radius: 5px;
-  border: 2px solid rgb(240, 202, 163);
+  border: 2px solid rgb(226, 128, 110);
 }
 
 .product-image img {
   height: 20vh;
+  border-radius: 5px;
+  border: 2px solid rgb(241, 136 , 117)
 }
 
 .hide {
@@ -191,20 +195,21 @@ body {
   width: 9vw;
 }
 
-/* .edit_profile,
-.edit-product {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 60vw;
+.close,
+.edit-close {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  font-size: 2rem;
   color: rgb(240, 202, 163);
-  background-color: rgb(241, 136, 117);
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  padding: 2%;
+  background-color: rgb(241, 136 , 117);
+  border-radius: 10px;
+  border: 2px solid rgb(241, 136 , 117)
 }
 
-.edit_profile input::placeholder,
-.edit-product input::placeholder {
-  color: rgb(240, 202, 163);
-} */
+.close:hover,
+.edit-close:hover {
+  color: rgb(241, 136 , 117);
+  background-color: rgb(240, 202, 163);
+  transition: 0.3s ease-in-out;
+}

@@ -2,14 +2,13 @@ function viewProfile() {
   console.log(window.localStorage["jwt-token"]);
   console.log(window.localStorage["username"]);
   fetch(
-    `https://guarded-lake-78300.herokuapp.com/view-profile/${window.localStorage.getItem(
-      "username"
-    )}/`,
+    `https://guarded-lake-78300.herokuapp.com/view-profile/${window.localStorage[
+      "username"]
+    }/`,
     {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
         Authorization: `jwt ${window.localStorage["jwt-token"]}`,
       },
     }
@@ -44,10 +43,6 @@ function edit () {
   let container = document.querySelector('.edit-container')
   container.classList.toggle("hide");
 }
-
-document.querySelector('.close').addEventListener('click', () => {
-  edit()
-})
 
 function saveEditedProfile() {
   fetch(
@@ -93,9 +88,18 @@ function deleteProfile() {
     });
 }
 
+document.querySelector('.edit-close').addEventListener('click', () => {
+    let edit_product = document.querySelector('.edit-product')
+  edit_product.classList.toggle("hide");
+  container.classList.toggle("hide");
+  container.classList.toggle("edit-close");
+})
+
 function updateProduct (e) {
   let edit_product = document.querySelector('.edit-product')
   edit_product.classList.toggle("hide");
+  container.classList.toggle("hide");
+  container.classList.toggle("edit-close");
   edit_product.id = e.parentElement.parentElement.id
 }
 
@@ -126,7 +130,7 @@ function editProduct() {
 }
 
 function viewUsersProducts() {
-  fetch(`https://guarded-lake-78300.herokuapp.com/view-users-products/${window.localStorage["user-id"]}/`, {
+  fetch(`https://guarded-lake-78300.herokuapp.com/view-users-products/${window.localStorage["user_id"]}/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

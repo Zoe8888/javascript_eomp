@@ -36,6 +36,7 @@ function signIn(username, password) {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
+          window.localStorage.setItem("user_id", data.registered_user[0]);
         });
         console.log(data);
         storage = window.localStorage;
@@ -101,7 +102,7 @@ function userInfo(username) {
       console.log(window.localStorage["user-id"]);
     });
 }
-userInfo(window.localStorage.getItem("username"));
+
 
 function showProducts() {
   console.log(window.localStorage["jwt-token"]);

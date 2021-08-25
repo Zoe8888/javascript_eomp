@@ -18,10 +18,10 @@
               onsubmit="signIn(document.querySelector('.username').value, document.querySelector('.password').value); return false"
             >
               <div>
-                <input class="username" type="text" placeholder="Username" />
+                <input class="username" type="text" placeholder="Username" required />
               </div>
               <div>
-                <input class="password" type="password" placeholder="Password" />
+                <input class="password" type="password" placeholder="Password" required />
               </div>
               <button class="login-button">Log In</button>
             </form>
@@ -37,19 +37,19 @@
               document.querySelector('.passkey').value); return false"
             >
               <div>
-                <input class="name" type="text" placeholder="Name" />
+                <input class="name" type="text" placeholder="Name" required />
               </div>
               <div>
-                <input class="surname" type="text" placeholder="Surname" />
+                <input class="surname" type="text" placeholder="Surname" required />
               </div>
               <div>
-                <input class="email" type="text" placeholder="Email" />
+                <input class="email" type="text" placeholder="Email" required />
               </div>
               <div>
-                <input class="userkey" type="text" placeholder="Username" />
+                <input class="userkey" type="text" placeholder="Username" required />
               </div>
               <div>
-                <input class="passkey" type="text" placeholder="Password" />
+                <input class="passkey" type="password" placeholder="Password" required />
               </div>
               <button class="register-button">Register</button>
             </form>
@@ -58,14 +58,14 @@
         <div id="right-container">
           <h1>Welcome back to the <br /><span>Crystal Cave</span></h1>
           <p>It's great to see you again!</p>
-          <img src="/images/crystals-removebg-preview.png" alt="eye" />
+          <img src="/images/crystals-removebg-preview.png" alt="Rose quartz crystals" />
           <p>Don't have an account?</p>
           <button id="signUp" onclick="switch_side()">Create account</button>
         </div>
         <div id="left-container">
           <h1>Welcome to the <br /><span>Crystal Cave</span></h1>
           <p>We're so glad to see you!</p>
-          <img src="/images/crystals-removebg-preview.png" alt="eye" />
+          <img src="/images/crystals-removebg-preview.png" alt="Rose quartz crystals" />
           <p>Already have an account?</p>
           <button id="signIn" onclick="switch_side()">Sign In</button>
         </div>

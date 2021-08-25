@@ -29,7 +29,7 @@
       </div>
       <div class="edit-container hide">
         <form class="edit_profile" onsubmit="return false">
-          <button class="close">X</button>
+          <button class="close hide" onclick="updateProduct()">X</button>
           <input class="edit-name" type="text" placeholder="Name" />
           <input class="edit-surname" type="text" placeholder="Surname" />
           <input class="edit-email" type="text" placeholder="Email" />
@@ -66,6 +66,7 @@
         <form
         onsubmit="return false"
       >
+        <button class="edit-close">X</button>
         <input type="text" class="edit-product_name" placeholder="Product Name" />
         <input type="text" class="edit-category" placeholder="Category" />
         <input type="text" class="edit-description" placeholder="Description" />
