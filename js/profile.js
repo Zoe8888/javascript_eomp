@@ -94,21 +94,6 @@ function deleteProfile() {
     });
 }
 
-document.querySelector('.edit-close').addEventListener('click', () => {
-    let edit_product = document.querySelector('.edit-product')
-  edit_product.classList.toggle("hide-edit");
-  // container.classList.toggle("hide");
-  edit_product.classList.toggle("edit-close");
-})
-
-function updateProduct (e) {
-  let edit_product = document.querySelector('.edit-product')
-  edit_product.classList.toggle("hide-edit");
-  // container.classList.toggle("hide");
-  // edit_product.classList.toggle("edit-close");
-  edit_product.id = e.parentElement.parentElement.id
-}
-
 function editProduct() {
   console.log(document.querySelector('.edit-product_name').value, document.querySelector('.edit-category').value, document.querySelector('.edit-description').value, document.querySelector('.edit-dimensions').value, document.querySelector('.edit-price').value, document.querySelectorAll('.hide')[1].src)
   fetch(`https://guarded-lake-78300.herokuapp.com/edit-product/${parseInt(document.querySelector(".edit-product").id)}/`, {
@@ -133,6 +118,21 @@ function editProduct() {
     window.alert("Your product has been edited successfully.");
     window.location.href = "/profile.html";
   });
+}
+
+document.querySelector('.edit-close').addEventListener('click', () => {
+  let edit_product = document.querySelector('.edit-product')
+edit_product.classList.toggle("hide-edit");
+// container.classList.toggle("hide");
+edit_product.classList.toggle("edit-close");
+})
+
+function updateProduct (e) {
+let edit_product = document.querySelector('.edit-product')
+edit_product.classList.toggle("hide-edit");
+// container.classList.toggle("hide");
+// edit_product.classList.toggle("edit-close");
+edit_product.id = e.currentTarget.parentElement.parentElement.id
 }
 
 function viewUsersProducts() {
